@@ -16,5 +16,6 @@ Route::post('/updateEtudiant', [Etudiants::class, 'updateEtudiant'])->name('upda
 Route::post('/deleteEtudiant', [Etudiants::class, 'deleteEtudiant'])->name('deleteEtudiant');
 Route::get('/afficherEtudiant', [Etudiants::class, 'afficherEtudiant'])->name('afficherEtudiant');
 Route::get('/etudiant', [Etudiants::class, 'etudiant'])->name('etudiant');
+Route::get('/editEtudiant', [Etudiants::class, 'editEtudiant'])->name('editEtudiant');
 
 require __DIR__.'/settings.php';

@@ -11,6 +11,7 @@
         <h1>Inscription</h1>
 
         <form action="{{ route('createEtudiant') }}" method="POST">
+            @csrf
             <label for="nom">Nom</label>
             <input type="text" id="nom" name="nom" required>
 
@@ -25,11 +26,9 @@
     </main>
     
     <script>
-        button.addEventListener('click', function() {
-            if(document.getElementById('nom') !== null){
-                alert("L'etudiant a été ajouté avec succès !");
-        }
-        });
+        @if(session('success_pop'))
+            alert("{!! session('success_pop') !!}");
+        @endif
     </script>
 </body>
 </html>
