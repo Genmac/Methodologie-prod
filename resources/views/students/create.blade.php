@@ -1,5 +1,7 @@
 
-@include('_header', ['title' => 'Add New Student'])
+@extends('_header')
+@section('title', 'Add New Student')
+@section('content')
     <div class="container mt-5">
         <h1 class="mb-4">Add New Student</h1>
         <form action="{{ route('students.store') }}" method="POST">
@@ -7,5 +9,4 @@
             @include('students._formstudent')
         </form>
     </div>
-</body>
-</html>
+@endsection

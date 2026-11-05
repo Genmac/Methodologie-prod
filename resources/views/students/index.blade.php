@@ -1,4 +1,6 @@
-@include('_header', ['title' => 'Students List'])
+@extends('_header')
+@section('title', 'Students List')
+@section('content')
     <div class="container mt-5">
     @if($students->isEmpty())
         <div class="container mt-5">
@@ -21,7 +23,7 @@
                 <tbody>
                     @foreach($students as $student)
                         <tr>
-                            <td>{{ $student->nom }} {{ $student->prenom }}</td>
+                            <td> {{ $student->prenom }} {{ $student->nom }}</td>
                             <td>{{ $student->email }}</td>
                             <td>{{ $student->date_naissance }}</td>
                             <td>
@@ -40,5 +42,4 @@
         </div>
     @endif
 </div>
-</body>
-</html>
+@endsection
