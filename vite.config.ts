@@ -15,7 +15,6 @@ export default defineConfig({
                 'resources/css/hello.css',
                 'resources/css/index.css',
                 'resources/css/etudiant.css',
-                'resources/css/afficherEtudiant.css',
                 'resources/js/app.tsx',
             ],
             refresh: true,
