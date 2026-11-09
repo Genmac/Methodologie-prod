@@ -5,6 +5,7 @@ use App\Http\Controllers\Hello;
 use App\Http\Controllers\Etudiants;
 use App\Http\Controllers\Index;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\ProfesseurController;
 Route::get('/', [Index::class, 'home'])->name('home');
 
 Route::middleware(['auth', 'verified'])->group(function () {
@@ -19,5 +20,6 @@ Route::get('/etudiant', [Etudiants::class, 'etudiant'])->name('etudiant');
 Route::get('/editEtudiant', [Etudiants::class, 'editEtudiant'])->name('editEtudiant');
 Route::get('/students', [StudentController::class, 'index'])->name('students.index');
 Route::resource('students', StudentController::class);
+Route::resource('professeurs', ProfesseurController::class);
 
 require __DIR__.'/settings.php';
