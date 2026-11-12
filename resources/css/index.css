@@ -4,6 +4,9 @@ body {
 }
 
 nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 16px;
     background: #f1f5f9;
 }
@@ -12,4 +15,47 @@ nav a {
     margin-right: 16px;
     color: #2563eb;
     text-decoration: none;
+}
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+main p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card-etudiants {
+    display: inline-block;
+    margin: 10px;
+}
+
+.card{
+    width: 70%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 50%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.contenu{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
