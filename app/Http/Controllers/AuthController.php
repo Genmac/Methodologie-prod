@@ -38,17 +38,16 @@ class AuthController extends Controller
         $data = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:8|confirmed',
+            'password' => 'required|string|min:8',
         ]);
 
-        /*$user = User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-        ]);*/
-        Log::info("Nom: $data[name], Email: $data[email], Password: $data[password]");
-        User::create($data);
-        Auth::login($data);
+        ]);
+        //Log::info("Nom: $data[name], Email: $data[email], Password: $data[password]");
+        Auth::login($user);
         return redirect()->route('professeurs.index');
     }
 }
